@@ -57,15 +57,29 @@ class Truck extends Vehicle {
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists
-
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
+  const { make, model, weight } = vehicle;
+  // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
+  if (weight <= this.towingCapacity) {
     // TODO: If it is, log that the vehicle is being towed
+    console.log(`The ${make} ${model} is being towed by the truck.`);
+  } else {
     // TODO: If it is not, log that the vehicle is too heavy to be towed
+    console.log(`The ${make} ${model} is too heavy to be towed by the truck.`);
   }
+}
 
   // TODO: Override the printDetails method from the Vehicle class
+  override printDetails(): void {
     // TODO: The method should call the printDetails method of the parent class
+    super.printDetails();
     // TODO: The method should log the details of the Truck
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Make: ${this.make}`);.
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight}`);
+    console.log(`Top Speed: ${this.topSpeed}`);
+  }
     // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
 }
 
