@@ -296,23 +296,19 @@ class Cli {
       .then((answers: { [key: string]: any }) => {
         // TODO: check if the selected vehicle is the truck
         if (answers.vehicle !== "truck") {
-          console.log("The selected vehicle is not a truck");
-        } else if (answers.vehicle === "car") {
-          console.log("The selected vehicle is a car");
-        } else if (answers.vehicle === "motorbike") {
-          console.log("The selected vehicle is a motorbike");
-        }
+          console.log("Truck cannot tow itself");
+       
           {
-            console.log("The selected vehicle is a truck");
+            
             return;
           }
-        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-if (answers.vehicle === "truck") {
-  console.log("Truck cannot tow itself");
-  return;
-}
 
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+      } else if (answers.vehicle === "car") {
+        console.log("The selected vehicle is a car");
+      } else if (answers.vehicle === "motorbike") {
+        console.log("The selected vehicle is a motorbike");
+      }
       });
   }
 

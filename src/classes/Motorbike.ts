@@ -39,7 +39,8 @@ wheels: Wheel[];
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-
+    this.wheels = wheels;
+    
     // TODO: The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
 if (wheels.length !== 2) {
   this.wheels = [new Wheel(), new Wheel()];
