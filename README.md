@@ -5,9 +5,11 @@
 
 ## Features 
 **User-friendly Interactive**
+
 This has an easy to use interface with the use of the up and down arrows. 
 
 **Customizable Components**
+
 Create new vehicle to use or select from existing vehicles.  When using the create new vehicle it will then be available for you to use in the existing vehicle selection. When you choose the truck option you will have a new feature of tow capacity and to be able to tow vehicle. When you choose the motorbike option within you will see that you have the option to "pull a wheelie".
 
 **Realistic**
@@ -15,6 +17,7 @@ Create new vehicle to use or select from existing vehicles.  When using the crea
 You will be able to simulate real-world vehicle options to fit the needs of the user. 
 
 **Collaboration Support**
+
 Always open to share and collaborate on vehicle builder with team(s).
 
 ## Installation
