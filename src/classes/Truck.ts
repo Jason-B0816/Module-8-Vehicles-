@@ -50,14 +50,14 @@ class Truck extends Vehicle implements AbleToTow {
     this.wheels = wheels;
     this.towingCapacity = towingCapacity;
     this.topSpeed = topSpeed;
-    this.wheels.forEach((wheel, index) => {
-      console.log(`Wheel ${index + 1}:`);
-      console.log(`Diameter: ${wheel.getDiameter} inch, Tire Brand: ${wheel.getTireBrand}`);
-    });
+    
+    if (wheels.length !== 4) {
+      this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+    } else {
+      this.wheels = wheels;
+    }
   }
     
-
-
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists
@@ -88,6 +88,7 @@ class Truck extends Vehicle implements AbleToTow {
     console.log(`Weight: ${this.weight}`);
     console.log(`Top Speed: ${this.topSpeed}`);
     console.log(`Towing Capacity: ${this.towingCapacity}`);
+    
     console.log(
       `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
     );
