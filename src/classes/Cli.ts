@@ -295,8 +295,13 @@ class Cli {
       ])
       .then((answers: { [key: string]: any }) => {
         // TODO: check if the selected vehicle is the truck
-        if (answers.vehicle !== "truck") 
-          
+        if (answers.vehicle !== "truck") {
+          console.log("The selected vehicle is not a truck");
+        } else if (answers.vehicle === "car") {
+          console.log("The selected vehicle is a car");
+        } else if (answers.vehicle === "motorbike") {
+          console.log("The selected vehicle is a motorbike");
+        }
           {
             console.log("The selected vehicle is a truck");
             return;
