@@ -296,6 +296,7 @@ class Cli {
       .then((answers: { [key: string]: any }) => {
         // TODO: check if the selected vehicle is the truck
         if (answers.vehicle !== "truck") 
+          
           {
             console.log("The selected vehicle is a truck");
             return;
@@ -328,6 +329,8 @@ if (answers.vehicle === "truck") {
             'Turn right',
             'Turn left',
             'Reverse',
+            'Tow',
+            'Wheelie',
             'Select or create another vehicle',
             'Exit',
           ],
@@ -392,8 +395,18 @@ if (answers.vehicle === "truck") {
             }
           }
         }
-        // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
-        else if (answers.action === 'Tow') {
+        else if (answers.action === 'Wheelie') {
+          for (let i = 0; i < this.vehicles.length; i++) {
+            const selectedBike = this.vehicles[i];
+            if (selectedBike.vin === this.selectedVehicleVin) {
+              if (selectedBike instanceof Motorbike) {
+                selectedBike.wheelie();
+              } else {
+                console.log('This vehicle cannot perform a wheelie');
+              }
+            }
+          }
+        } else if (answers.action === 'Tow') {
           // find the selected vehicle and tow it
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
@@ -402,6 +415,7 @@ if (answers.vehicle === "truck") {
             }
           }
         } 
+
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle

@@ -50,7 +50,7 @@ if (wheels.length !== 2) {
 
   // TODO: Implement the wheelie method
   wheelie(): void {
-
+    
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
 console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
   }
@@ -76,7 +76,11 @@ console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
           );
     console.log(`Color: ${this.color}`
           );
-    console.log(`Wheels:`
+    console.log(
+      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`,
+    );
+      console.log(
+      `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
           );
   } 
 }
