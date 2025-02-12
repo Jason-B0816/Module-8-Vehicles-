@@ -41,6 +41,7 @@ proceed with prompt questions
 3. Customize components (color, make, model, year, weight, top speed, front wheel diameter, front wheel brand, rear wheel diameter, rear wheel brand, tow option in truck and wheelie option in motorbikes)
 4. Simulate and analyze performance of preformed task.
 5. Save or export data to your new github repository. 
+6. https://drive.google.com/file/d/10_2g5i1Opyl62pMIJk1UtaLwHQKFvGIE/view?usp=sharing
 
 ## Contributing 
 
